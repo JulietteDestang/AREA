@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  db:
+    container_name: db # add a name for the container
+    image: mysql:latest # use latest version of mysql
+    ports:
+      - '3306:3306'
+    environment: # add default values, see docs for more info.
+      MYSQL_USER: user
+      MYSQL_ROOT_PASSWORD: mypassword
+      MYSQL_PASSWORD: mypassword
+      MYSQL_DATABASE: testdb # create this database on startup
+    volumes:
+      - my-db:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
+
+  server:
+    container_name: server
+    build: # Use the Dockerfile from the current directory to build container.
+      context: ./backend
+    restart: on-failure
+    ports: 
+      - 8080:8080
+    depends_on: 
+      - "db"
+
+  # client_mobile:
+  #   container_name: client_mobile
+  #   volumes:
+  #     - common:/apk
+  #   depends_on:
+  #     - "server"
+
+  client_web:
+    container_name: client_web
+    build: # Use the Dockerfile from the current directory to build container.
+      context: ./web/web-app
+    ports: 
+      - "8081:8081"
+    expose:
+        - 8081
+    volumes:
+      - common:/apk
+    depends_on: 
+      - "server"
+      # - "client_mobile"
+
+  client_mobile:
+    build: './mobile'
+
+volumes: # add volume to persist data.
+  my-db:
+  common:

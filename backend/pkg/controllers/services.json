@@ -1,0 +1,318 @@
+[
+    {
+        "name": "weather",
+        "actions": [
+            {
+                "name": "temperature_over_N_degrees",
+                "description": "The temperature is over a given value",
+                "field_names": ["City", "Temperature in C°"] 
+            },
+            {
+                "name": "temperature_under_N_degrees",
+                "description": "The temperature is under a given value",
+                "field_names": ["City", "Temperature in C°"] 
+            }
+        ],
+        "reactions": [
+        ]
+    },
+    {
+        "name": "spotify",
+        "actions": [
+        ],
+        "reactions": [
+            {
+                "name": "add_song_to_queue",
+                "description": "Adds a given song to the user's queue",
+                "field_names": ["Song tittle"]
+            }
+        ]
+    },
+    {
+        "name": "deezer",
+        "actions": [
+        ],
+        "reactions": [
+            {
+                "name": "add_song_to_playlist",
+                "description": "Adds a given song to the given playlist",
+                "field_names": ["Song tittle", "Playlist name"]
+            }
+        ]
+    },
+    {
+        "name": "league",
+        "actions": [
+            {
+                "name": "is_teemo",
+                "description": "Check if the player mains Teemo",
+                "field_names": ["Player nickName"]
+            },
+            {
+                "name": "winrate_over_N%",
+                "description": "The player winrate is over a given %",
+                "field_names": ["Player nickName", "value"]
+            },
+            {
+                "name": "kda_over_N",
+                "description": "The player KDA is over a given value",
+                "field_names": ["Player nickName", "value"]
+            }
+        ],
+        "reactions": [
+        ]
+    },
+    {
+        "name": "covid",
+        "actions": [
+            {
+                "name": "case_over_N",
+                "description": "The covid cases are over a given number",
+                "field_names": ["Number of cases"]
+            },
+            {
+                "name": "critical_over_N",
+                "description": "The covid critical cases are over a given number",
+                "field_names": ["Number of critical cases"]
+            }
+        ],
+        "reactions": [
+        ]
+    },
+    {
+        "name": "Heads or Tails",
+        "actions": [
+            {
+                "name": "heads_or_tails",
+                "description": "Play heads or tails",
+                "field_names": ["Heads or Tails ?"]
+            }
+        ],
+        "reactions": [
+        ]
+    },
+    {
+        "name": "Crypto",
+        "actions": [
+            {
+                "name": "crypto_is_over_n",
+                "description": "A choosen crypto is over a given number",
+                "field_names": ["target (eur, usd, jpy...)", "base (btc, bnb, ltc...)", "value"]
+            },
+            {
+                "name": "crypto_is_under_n",
+                "description": "A choosen crypto is under a given number",
+                "field_names": ["target (eur, usd, jpy...)", "base (btc, bnb, ltc...)", "value"]
+            }
+        ],
+        "reactions": [
+        ]
+    },
+    {
+        "name": "email",
+        "actions": [
+        ],
+        "reactions": [
+            {
+                "name": "send_email",
+                "description": "Sends an email from user to given receiver",
+                "field_names": ["Message", "Mail of the receiver"]
+            }
+        ]
+    },
+    {
+        "name": "discord",
+        "actions": [
+        ],
+        "reactions": [
+            {
+                "name": "send_message",
+                "description": "Sends a webhook message on selected channel",
+                "field_names": ["Message"]
+            }
+        ]
+    },
+    {
+        "name": "github",
+        "actions": [
+            {
+                "name": "push",
+                "description": "Push action happened on your repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "pull_request",
+                "description": "Pull request action happened on your repository",
+                "field_names": ["GitHub username", "Repository name"]
+
+            },
+            {
+                "name": "branch_protection_rule",
+                "description": "If branch protection changed on your repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "check_run",
+                "description": "Checks run action on your repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "check_suite",
+                "description": "Checks suite action on your repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "create",
+                "description": "Someone created a git reference on your repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "delete",
+                "description": "Someone deleted a git reference on your repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "deployment",
+                "description": "Check deploy action on your repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "deployment_status",
+                "description": "Check deploy status action on your repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "discussion",
+                "description": "A discussion started on you repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "discussion_comment",
+                "description": "A comment was added to discussion on you repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "fork",
+                "description": "Fork action on your repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "gollum",
+                "description": "Gollum action on your repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "issue_comment",
+                "description": "Someone wrote an issue comment",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "issues",
+                "description": "Someone created an issue",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "label",
+                "description": "Someone created a label on your repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "merge_group",
+                "description": "A merge was perfomed on your repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "milestone",
+                "description": "A milestone was created on your repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "page_build",
+                "description": "Someone pushed on your publishing branch",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "project_card",
+                "description": "Created a project card on your repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "project_column",
+                "description": "Moved a card to a column in you repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "public",
+                "description": "Set your repoistory to public",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "pull_request_comment",
+                "description": "Add a comment to a pull request",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "pull_request_review",
+                "description": "Someone reviewed your pull request",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "pull_request_review_comment",
+                "description": "Added a comment to a review on some pull request",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "pull_request_review_target",
+                "description": "Some activity was detected on a pull request",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "registry_package",
+                "description": "Some activity was detected on your package",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "release",
+                "description": "Released action on your repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "repository_dispatch",
+                "description": "Dispatched action on your repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "schedule",
+                "description": "Added a schedule on your repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "status",
+                "description": "Changed the status of your repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "watch",
+                "description": "Someone watched your repository",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "workflow_call",
+                "description": "There was some activity on your workflow",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "workflow_dispatch",
+                "description": "Dispatched action on your workflow",
+                "field_names": ["GitHub username", "Repository name"]
+            },
+            {
+                "name": "workflow_run",
+                "description": "Ran your repository workflow",
+                "field_names": ["GitHub username", "Repository name"]
+            }
+        ],
+        "reactions": [
+        ]
+    }
+]
